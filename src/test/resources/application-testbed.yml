@@ -1,0 +1,18 @@
+spring.profiles.active: local
+# Disable the embedded Tomcat
+spring:
+  main:
+    web-application-type: none
+---
+spring.profiles: local
+armeria:
+  ports:
+    - port: 8080
+      protocol: HTTP
+
+backend:
+  ports:
+    - host: localhost
+      port: 8081
+    - host: localhost
+      port: 8082
